@@ -89,10 +89,11 @@ onMounted(() => {
   font-weight: 500;
 }
 
-/* 🔑 Eingabefeld mit mehr Abstand */
+/* 🔑 Eingabefeld mit responsiver Breite */
 .input-field {
-  width: 100%;
+  width: 90%;
   max-width: 350px;
+  min-width: 200px;
   padding: 14px;
   border-radius: 10px;
   border: 2px solid #b197fc;
@@ -104,7 +105,7 @@ onMounted(() => {
   font-weight: bold;
   transition: all 0.3s ease-in-out;
   display: block;
-  margin: 0 auto 24px auto; /* Abstand nach unten vergrößert */
+  margin: 0 auto 24px auto;
 }
 
 /* Platzhalter */
@@ -119,10 +120,11 @@ onMounted(() => {
   box-shadow: 0 0 12px #b197fc;
 }
 
-/* 🔘 Button mit mehr Abstand */
+/* 🔘 Button mit gleicher responsiver Breite */
 .btn-check {
-  width: 100%;
+  width: 90%;
   max-width: 350px;
+  min-width: 200px;
   padding: 14px;
   background: #b197fc;
   color: white;
@@ -161,7 +163,6 @@ onMounted(() => {
   .input-field,
   .btn-check {
     font-size: 16px;
-    max-width: 100%;
   }
 }
 
