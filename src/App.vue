@@ -17,11 +17,11 @@ const checkDressCode = () => {
   if (validDressCodes.includes(dressCodeInput.value.toLowerCase().trim())) {
     window.location.href = "https://dress-code-wizard.vercel.app/";
   } else {
-    alert("❌ Falscher Dress Code! Versuch es nochmal.");
+    alert("❌ Wrong Dress Code! Try again.");
   }
 };
 
-// Enter-Taste erlauben
+// Allow Enter key
 onMounted(() => {
   window.addEventListener("keydown", (e) => {
     if (e.key === "Enter") {
@@ -35,20 +35,20 @@ onMounted(() => {
   <div class="background">
     <div class="glass-card">
       <h1 class="title">🎩 Dress Code Check</h1>
-      <p class="subtitle">✨ Gib den richtigen Code ein, um Zugang zu erhalten! ✨</p>
+      <p class="subtitle">✨ Enter the correct code to gain access! ✨</p>
 
       <input
         v-model="dressCodeInput"
-        placeholder="🔑 Dein Dress Code..."
+        placeholder="🔑 Your Dress Code..."
         class="input-field"
       />
-      <button @click="checkDressCode" class="btn-check">✅ Überprüfen</button>
+      <button @click="checkDressCode" class="btn-check">✅ Check</button>
     </div>
   </div>
 </template>
 
 <style>
-/* 🌟 Weißer, cleaner Hintergrund */
+/* 🌟 White, clean background */
 .background {
   background: white;
   min-height: 100vh;
@@ -58,7 +58,7 @@ onMounted(() => {
   padding: 20px;
 }
 
-/* 💎 Glas-Optik */
+/* 💎 Glass effect */
 .glass-card {
   background: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(12px);
@@ -72,7 +72,7 @@ onMounted(() => {
   animation: fadeIn 0.8s ease-in-out;
 }
 
-/* 🎩 Titel in edlem Lila */
+/* 🎩 Title in elegant purple */
 .title {
   font-size: 28px;
   color: #5a189a;
@@ -81,7 +81,7 @@ onMounted(() => {
   text-shadow: 0px 0px 6px rgba(90, 24, 154, 0.3);
 }
 
-/* ✨ Untertitel */
+/* ✨ Subtitle */
 .subtitle {
   color: #4b0082;
   font-size: 14px;
@@ -89,7 +89,7 @@ onMounted(() => {
   font-weight: 500;
 }
 
-/* 🔑 Eingabefeld mit responsiver Breite */
+/* 🔑 Input field with responsive width */
 .input-field {
   width: 90%;
   max-width: 350px;
@@ -108,19 +108,19 @@ onMounted(() => {
   margin: 0 auto 24px auto;
 }
 
-/* Platzhalter */
+/* Placeholder */
 .input-field::placeholder {
   color: #6c757d;
   font-size: 16px;
 }
 
-/* Hover- und Fokus-Effekt */
+/* Hover and focus effect */
 .input-field:focus {
   border-color: #5a189a;
   box-shadow: 0 0 12px #b197fc;
 }
 
-/* 🔘 Button mit gleicher responsiver Breite */
+/* 🔘 Button with same responsive width */
 .btn-check {
   width: 90%;
   max-width: 350px;
@@ -166,7 +166,7 @@ onMounted(() => {
   }
 }
 
-/* 🎬 Sanfte Einblend-Animation */
+/* 🎬 Smooth fade-in animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
